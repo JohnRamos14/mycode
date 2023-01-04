@@ -1,17 +1,25 @@
 #!/usr/bin/env python3
+"""
+Lab 18 Challenge. Asking for user input and printing current day of the week.
+"""
 
-import datetime
+from datetime import datetime
 
 def main():
+    
+    # input to get  user's name
+    username_input = input("Please enter username: ")
 
-    user_input = input("Please enter username: ")
+    # to get date
+    now = datetime.now()
 
-    now = datetime.datetime.now()
-
+    #to get day of the week
     day_of_week = now.strftime("%A")
 
+    # printing using f-strings
+    print(f"Hello,{username_input}! Happy {day_of_week}!")
 
-    print(f"Hello,{user_input}! Happy {day_of_week}!")
-main()
+if __name__ == "__main__":
+    main()
 
     

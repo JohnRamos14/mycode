@@ -39,7 +39,11 @@ def main():
     
     # list of animals
     animals = ["dog", "cat", "cow","pig", "bee", "hen"]
+    
+    # display list of animals
     print(animals)
+
+    # display dog using index 
     print(f"I have a pet {animals[0]}!")
 
 if __name__ == "__main__":

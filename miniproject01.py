@@ -52,7 +52,7 @@ def main():
 
         # randomize computer move
         computer_move = random.choice(['rock', 'paper', 'scissors'])
-        print(f"The computer choose: {computer_move}")
+        print(f"\nThe computer choose: {computer_move}")
 
         # determine who wins the game
         if user_move.lower() == computer_move:

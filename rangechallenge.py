@@ -5,8 +5,16 @@
 
 def main():
     """runtime"""
+    while True:
+            try:
+                num_of_bottles = int(input("How many bottles of beer you want? "))
+                if 1 < num_of_bottles <= 100:
+                    break
+                else:
+                    print("Can't have too much bottles!, must be between 1 and 100.")
 
-    num_of_bottles = int(input("How many bottles of beer you want? "))
+            except ValueError:
+                print("Invalid input... please enter any number between 1 and 100.")
 
     print("Counting down from {num_of_bottles}")
     

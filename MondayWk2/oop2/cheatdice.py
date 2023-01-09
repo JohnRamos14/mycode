@@ -33,3 +33,7 @@ class Cheat_Loaded_Dice(Player): # inheritance of Player
                 self.dice[i] += 1
             i += 1
 
+# always roll 6
+class Cheat_Roll6(Player):
+    def cheat(self):
+        self.dice = [6,6,6,]

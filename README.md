@@ -14,7 +14,7 @@ Learning Python. Some exercises I completed while learning the fundamentals of P
 * mix-list
 * strings
 * list challenge
-#### ThursdayWk1
+### ThursdayWk1
 * List Objects and Methods
 * List of Lists
 * Dictionaries

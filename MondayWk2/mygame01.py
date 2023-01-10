@@ -110,4 +110,38 @@ while True:
     ## Defube giw a player can win
     if currentRoom == 'Garden' and 'key' in inventory and 'potion' in inventory:
         print('You escaped the house with the ultra rare key and magic potion... YOU WON!')
-        break
+
+    # Define player's health
+    player_health = 100
+
+    # Define the monster's health
+    monster_health = 50
+
+    #Check if there's a monster in the room
+    if rooms.get(currentRoom).get('item') == 'monster':
+        print('A monster has appeared!')
+        print(f'Player Health: {player_health}')
+        print(f'Monster Health: {monster_health}')
+        while player_health > 0 and monster_health > 0:
+            print('What do you want to do? [fight/run]')
+            action = input()
+            if action == 'fight':
+                print('You attack the monster!')
+                monster_health -= 10
+                if monster_health <= 0:
+                    print('You killed the monster!')
+                    del rooms[currentRoom]['item']
+                    break
+                else:
+                    print(f'Monster Health: {monster_health}')
+                    print('The monster counterattacks!')
+                    player_health -= 5
+                    print(f'Player Health: {player_health}')
+            elif action == 'run':
+                print('You run away from the monster')
+                break
+        if player_health <= 0:
+            print('A monster has got you... GAME OVER!')
+            break
+
+

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Trivia Challenge</title>
+</head>
+<body>
+<h1>Welcome to the Trivia Challenge!</h1>
+<form action="{{url_for('submit')}}" method="post">
+      {% for question in questions %}
+<div>
+<p>{{ question.question }}</p>
+          {% for option in question.incorrect_answers %}
+<input type="radio" name="{{ question.question }}" value="{{ option }}"> {{ option }}<br>
+          {% endfor %}
+<input type="radio" name="{{ question.question }}" value="{{ question.correct_answer }}"> {{ question.correct_answer }}<br>
+</div>
+      {% endfor %}
+<input type="submit" value="Submit">
+</form>
+</body>
+</html>
